@@ -6,8 +6,7 @@
       "description": "Задача1Задача1Задача1Задача1Задача1",
       "isCompleted": false,
       "isPublic": false,
-      "authorId": 1,
-      "assigneeId": null
+      "authorId": 1
     },
     {
       "id": 2,
@@ -15,8 +14,51 @@
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 2,
-      "assigneeId": 1
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "title": "Задача 2",
+      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "isCompleted": true,
+      "isPublic": true,
+      "authorId": 1
+    }
+    ,
+    {
+      "id": 4,
+      "title": "Задача 2",
+      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "isCompleted": true,
+      "isPublic": true,
+      "authorId": 1
+    }
+    ,
+    {
+      "id": 5,
+      "title": "Задача 2",
+      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "isCompleted": true,
+      "isPublic": true,
+      "authorId": 2
+    }
+    ,
+    {
+      "id": 6,
+      "title": "Задача 2",
+      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "isCompleted": true,
+      "isPublic": true,
+      "authorId": 2
+    }
+    ,
+    {
+      "id": 7,
+      "title": "Задача 2",
+      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "isCompleted": true,
+      "isPublic": true,
+      "authorId": 2
     }
   ],
   "users": [

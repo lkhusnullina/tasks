@@ -10,13 +10,12 @@ export const api = axios.create({
   },
 });
 
-export const getTasks = async (): Promise<ITask[]> => {
+export const getTasks = async(): Promise<ITask[]> => {
   const response = await api.get('/tasks');
   return response.data;
 };
 
-export const getTaskById = async (id:number): Promise<ITask> => {
-    const response = await api.get(`/tasks/${id}`);
+export const getTaskById = async(id: number): Promise<ITask> => {
+  const response = await api.get(`/tasks/${id}`);
   return response.data;
-}
-
+};

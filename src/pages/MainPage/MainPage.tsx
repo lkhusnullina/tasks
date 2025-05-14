@@ -10,7 +10,6 @@ function MainPage() {
         <h2 className={styles.main__title}>Список задач</h2>
         <IconButton className={styles.main__btnAdd} icon={plusIcon} alt="plus"/>
       </div>
-
       <TasksList />
     </main>
   );

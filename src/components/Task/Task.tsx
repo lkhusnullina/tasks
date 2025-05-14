@@ -4,6 +4,7 @@ import editIcon from '../../assets/icons/editIcon.svg';
 import deleteIcon from '../../assets/icons/deleteIcon.svg';
 import styles from './Task.module.scss';
 import IconButton from '../IconButton/IconButton';
+import { Link } from 'react-router-dom';
 
 interface TaskProps {
   task: ITask;
@@ -23,20 +24,22 @@ function Task({ task }: TaskProps) {
       </div>
 
       <div className={styles.task__icons}>
-        <IconButton
-          className={styles.task__iconBtn}
-          icon={eyeIcon}
-          alt="eyeIcon"
-        />
+       <Link to={`/tasks/${task.id}`}>
+          <IconButton
+            className={styles.task__iconBtn}
+            icon={eyeIcon}
+            alt="Просмотр"
+          />
+        </Link>
         <IconButton
           className={styles.task__iconBtn}
           icon={editIcon}
-          alt="editIcon"
+          alt="Редактирование"
         />
         <IconButton
           className={styles.task__iconBtn}
           icon={deleteIcon}
-          alt="deleteIcon"
+          alt="Удаление"
         />
       </div>
     </div>
