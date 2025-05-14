@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getTasks } from '../../services/api';
 import type { ITask } from '../../models/iTask';
+import Task from '../Task/Task';
+import styles from './TasksList.module.scss'
 
 function TasksList() {
   const [tasks, setTasks] = useState<ITask[]>([]);
@@ -21,18 +23,13 @@ function TasksList() {
 
     loadTasks();
   }, []);
-  
+
   return (
-    <div>
+    <div className={styles.tasks}>
       {isLoading ? (
         <div>Загрузка задач...</div>
       ) : (
-        tasks.map((task) => (
-          <div key={task.id}>
-            <h3>{task.title}</h3>
-            <div>{task.description}</div>
-          </div>
-        ))
+        tasks.map((task) => <Task key={task.id} task={task} />)
       )}
     </div>
   );

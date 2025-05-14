@@ -1,0 +1,72 @@
+.task {
+  padding: 10px ;
+  min-width: 300px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #6c63ff;
+  border-radius: 5px;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__iconBtn {
+    background-color: transparent;
+  }
+
+  &__checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #6c63ff;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:checked {
+      background-color: #6c63ff;
+      border-color: #6c63ff;
+      position: relative;
+
+      &::after {
+        content: '✓';
+        color: white;
+        position: absolute;
+        left: 3px;
+        top: -1px;
+      }
+    }
+  }
+}
+
+// input[type="checkbox"] {
+//   appearance: none;
+//   width: 18px;
+//   height: 18px;
+//   border: 2px solid #6C63FF;
+//   border-radius: 2px;
+//   cursor: pointer;
+// }
+
+// input[type="checkbox"]:checked {
+//   background-color: #6C63FF;
+//   border-color: #6C63FF;
+//   position: relative;
+// }
+
+// input[type='checkbox']:checked::after {
+//   content: '✓';
+//   color: white;
+//   position: absolute;
+//   left: 3px;
+//   top: -1px;
+// }

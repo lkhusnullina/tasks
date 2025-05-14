@@ -1,0 +1,14 @@
+.main {
+    margin-top: 50px;
+    
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btnAdd {
+        padding: 10px 12px;
+        border-radius: 50%;
+        background-color: #6c63ff;
+        border: none;
+    }
+}
