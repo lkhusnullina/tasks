@@ -1,4 +1,4 @@
-import type { ITask } from '../../models/iTask';
+import type { ITask } from '../../models/ITask';
 import eyeIcon from '../../assets/icons/eyeIcon.svg';
 import editIcon from '../../assets/icons/editIcon.svg';
 import deleteIcon from '../../assets/icons/deleteIcon.svg';

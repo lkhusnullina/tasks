@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getTasks } from '../../services/api';
-import type { ITask } from '../../models/iTask';
+import type { ITask } from '../../models/ITask';
 import Task from '../Task/Task';
 import styles from './TasksList.module.scss'
 

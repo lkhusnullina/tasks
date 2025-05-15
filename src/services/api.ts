@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { ITask } from '../models/iTask';
+import type { ITask } from '../models/ITask';
 
 const API_URL = 'http://localhost:3001';
 

@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getTaskById } from '../../services/api';
-import type { ITask } from '../../models/iTask';
+import type { ITask } from '../../models/ITask';
 import Button from '../../components/Button/Button';
 import styles from './TaskPage.module.scss';
 
