@@ -1,5 +1,8 @@
 import axios from 'axios';
 import type { ITask } from '../models/ITask';
+export interface ILoginResponse {
+  accessToken: string;
+}
 
 const API_URL = 'http://localhost:3001';
 
@@ -10,12 +13,39 @@ export const api = axios.create({
   },
 });
 
-export const getTasks = async(): Promise<ITask[]> => {
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export const login = async (
+  email: string,
+  password: string,
+): Promise<ILoginResponse> => {
+  try {
+    const response = await api.post('/login', { email, password });
+    if (response.status !== 200) {
+      throw new Error('Ошибка входа');
+    }
+    const data = response.data;
+    localStorage.setItem('token', data.accessToken);
+    return data;
+
+  } catch (error) {
+    console.error('Ошибка входа:', error);
+    throw error;
+  }
+};
+
+export const getTasks = async (): Promise<ITask[]> => {
   const response = await api.get('/tasks');
   return response.data;
 };
 
-export const getTaskById = async(id: number): Promise<ITask> => {
+export const getTaskById = async (id: number): Promise<ITask> => {
   const response = await api.get(`/tasks/${id}`);
   return response.data;
 };

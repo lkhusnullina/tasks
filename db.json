@@ -6,7 +6,7 @@
       "description": "Задача1Задача1Задача1Задача1Задача1",
       "isCompleted": false,
       "isPublic": false,
-      "authorId": 1
+      "author": "bob@example.com"
     },
     {
       "id": 2,
@@ -14,64 +14,60 @@
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 2
+      "author": "love@example.com"
     },
     {
       "id": 3,
-      "title": "Задача 2",
+      "title": "Задача 3",
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 1
-    }
-    ,
+      "author": "bob@example.com"
+    },
     {
       "id": 4,
-      "title": "Задача 2",
+      "title": "Задача 4",
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 1
-    }
-    ,
+      "author": "bob@example.com"
+    },
     {
       "id": 5,
-      "title": "Задача 2",
+      "title": "Задача 5",
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 2
-    }
-    ,
+      "author": "love@example.com"
+    },
     {
       "id": 6,
-      "title": "Задача 2",
+      "title": "Задача 6",
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 2
-    }
-    ,
+      "author": "love@example.com"
+    },
     {
       "id": 7,
-      "title": "Задача 2",
+      "title": "Задача 7",
       "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
       "isCompleted": true,
       "isPublic": true,
-      "authorId": 2
+      "author": "love@example.com"
     }
   ],
   "users": [
     {
       "id": 1,
       "email": "love@example.com",
-      "password": "love123",
+      "password": "$2a$10$uOGFrUhHN12n/koegLF5Tu7Tmeps/byw4YfakKKTv9FDvMmexJso2",
       "name": "Lyuba"
     },
     {
       "id": 2,
       "email": "bob@example.com",
-      "password": "bob123",
+      "password": "$2a$10$uOGFrUhHN12n/koegLF5Tu7Tmeps/byw4YfakKKTv9FDvMmexJso2",
       "name": "Bob"
     }
   ]

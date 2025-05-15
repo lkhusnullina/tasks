@@ -4,8 +4,8 @@ import { AppRoutes } from './routers';
 function App() {
   return (
     <div className={styles.container}>
-     <AppRoutes />
+      <AppRoutes />
     </div>
-  )
+  );
 }
-export default App
+export default App;

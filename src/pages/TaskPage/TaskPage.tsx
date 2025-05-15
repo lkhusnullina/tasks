@@ -40,7 +40,7 @@ function TaskPage() {
       <div className={styles.taskPage__content}>
         <div>Описание: {task.description}</div>
         <div> Статус: {task.isCompleted ? 'Выполнена' : 'Не выполнена'}</div>
-        <div> Автор: </div>
+        <div> Автор: {task.author} </div>
       </div>
     </div>
   );

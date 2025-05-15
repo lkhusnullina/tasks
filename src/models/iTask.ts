@@ -4,5 +4,5 @@ export interface ITask {
   description: string;
   isCompleted: boolean;
   isPublic: boolean;
-  authorId: number;
+  author: string;
 }
