@@ -6,7 +6,7 @@ import styles from './User.module.scss';
 function User() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-
+  
   const handleLogout = () => {
     logout();
     navigate('/login');

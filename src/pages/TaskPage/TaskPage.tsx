@@ -4,6 +4,7 @@ import { getTaskById } from '../../services/api';
 import type { ITask } from '../../models/ITask';
 import Button from '../../components/Button/Button';
 import styles from './TaskPage.module.scss';
+import Preloader from '../../components/Preloader/Preloader';
 
 function TaskPage() {
   const { id } = useParams();
@@ -27,7 +28,7 @@ function TaskPage() {
     loadTask();
   }, [id]);
 
-  if (isLoading) return <div>Загрузка...</div>;
+  if (isLoading) return <Preloader/>;
   if (!task) return <div>Задача не найдена</div>;
   return (
     <div className={styles.taskPage}>

@@ -41,45 +41,50 @@ function CreateTaskPage() {
   };
 
   return (
-    <div className={styles.create}>
-      <div className={styles.create__container}>
-        <h2 className={styles.create__title}>Создание задачи </h2>
-        {error && <p className={styles.create__error}>{error}</p>}
-        <form className={styles.create__form} onSubmit={handleSubmit}>
-          <div className={styles.create__formGroup}>
-            <label className={styles.create__label}>Название</label>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-              className={styles.create__input}
-            />
-          </div>
-
-          <div className={styles.create__formGroup}>
-            <label className={styles.create__label}>Описание</label>
-            <input
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-              className={styles.create__input}
-            />
-          </div>
-          <div className={styles.create__formGroup}>
-            <label className={styles.create__label}>
-              Выполнено:
+    <>
+      <Button className={styles.create__btnPrev} onClick={() => navigate(-1)}>
+        Назад
+      </Button>
+      <div className={styles.create}>
+        <div className={styles.create__container}>
+          <h2 className={styles.create__title}>Создание задачи </h2>
+          {error && <p className={styles.create__error}>{error}</p>}
+          <form className={styles.create__form} onSubmit={handleSubmit}>
+            <div className={styles.create__formGroup}>
+              <label className={styles.create__label}>Название</label>
               <input
-                type="checkbox"
-                checked={isCompleted}
-                onChange={(e) => setIsCompleted(e.target.checked)}
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                required
+                className={styles.create__input}
               />
-            </label>
-          </div>
-          <Button className={styles.create__button}>Создать</Button>
-        </form>
+            </div>
+
+            <div className={styles.create__formGroup}>
+              <label className={styles.create__label}>Описание</label>
+              <input
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                required
+                className={styles.create__input}
+              />
+            </div>
+            <div className={styles.create__formGroup}>
+              <label className={styles.create__label}>
+                Выполнено:
+                <input
+                  type="checkbox"
+                  checked={isCompleted}
+                  onChange={(e) => setIsCompleted(e.target.checked)}
+                />
+              </label>
+            </div>
+            <Button className={styles.create__button}>Создать</Button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

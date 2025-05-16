@@ -59,3 +59,7 @@ export const editTask = async (id: number, taskData: Partial<ITask>): Promise<IT
   const response = await api.put(`/tasks/${id}`, taskData);
   return response.data;
 };
+
+export const deleteTask = async (id: number): Promise<void> => {
+  await api.delete(`/tasks/${id}`);
+};

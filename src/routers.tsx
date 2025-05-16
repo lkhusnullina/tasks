@@ -14,10 +14,9 @@ export const AppRoutes = () => {
       <AuthProvider>
         <Routes>
           <Route path="/login" element={<AuthPage />} />
-          
           <Route path="/" element={<LayoutPage />}>
             <Route element={<ProtectedRoute />}>
-              <Route path="/" element={<MainPage />} />
+              <Route index element={<MainPage />} />
               <Route path="/tasks/:id" element={<TaskPage />} />
               <Route path="/create" element={<CreateTaskPage/>} />
               <Route path="/tasks/:id/edit" element={<EditTaskPage/>} />

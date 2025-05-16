@@ -1,8 +1,15 @@
 .edit {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  &__btnPrev {
+    background: transparent;
+    color: #f7f7f7;
+    font-size: 16px;
+    border: 2px solid #6c63ff;
+    border-radius: 5px;
+  }
 
   &__container {
     min-width: 600px;

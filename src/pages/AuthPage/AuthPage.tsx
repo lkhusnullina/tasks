@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 function AuthPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('love@example.com');
-  const [password, setPassword] = useState('11211121');
+  const [email, setEmail] = useState('user@example.com');
+  const [password, setPassword] = useState('');
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -5,12 +5,26 @@ import deleteIcon from '../../assets/icons/deleteIcon.svg';
 import styles from './Task.module.scss';
 import IconButton from '../IconButton/IconButton';
 import { Link } from 'react-router-dom';
+import { deleteTask } from '../../services/api';
 
 interface TaskProps {
   task: ITask;
+  onTaskDelete: (taskId: number) => void;
 }
 
-function Task({ task }: TaskProps) {
+function Task({ task, onTaskDelete }: TaskProps) {
+  const handleDeleteTask = async (taskId: number) => {
+    try {
+      if (!window.confirm('Вы уверены, что хотите удалить эту задачу?')) {
+        return;
+      }
+      await deleteTask(taskId);
+      onTaskDelete(taskId);
+    } catch (error) {
+      console.error('Ошибка при удалении задачи:', error);
+    }
+  };
+
   return (
     <div className={styles.task}>
       <div className={styles.task__info}>
@@ -42,6 +56,7 @@ function Task({ task }: TaskProps) {
           className={styles.task__iconBtn}
           icon={deleteIcon}
           alt="Удаление"
+          onClick={() => handleDeleteTask(task.id)}
         />
       </div>
     </div>

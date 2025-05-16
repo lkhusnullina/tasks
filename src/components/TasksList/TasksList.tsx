@@ -3,6 +3,7 @@ import { getTasks } from '../../services/api';
 import type { ITask } from '../../models/ITask';
 import Task from '../Task/Task';
 import styles from './TasksList.module.scss';
+import Preloader from '../Preloader/Preloader';
 
 interface TasksListProps {
   filter: 'all' | 'my';
@@ -38,12 +39,16 @@ function TasksList({ filter, user }: TasksListProps) {
     return true;
   });
 
+   const handleTaskDeleted = (deletedTaskId: number) => {
+    setTasks(prevTasks => prevTasks.filter(task => task.id !== deletedTaskId));
+  };
+
   return (
     <div className={styles.tasks}>
       {isLoading ? (
-        <div>Загрузка задач...</div>
+        <Preloader/>
       ) : filteredTasks.length > 0 ? (
-        filteredTasks.map((task) => <Task key={task.id} task={task} />)
+        filteredTasks.map((task) => <Task key={task.id} task={task} onTaskDelete={handleTaskDeleted}/>)
       ) : (
         <div>Нет задач для отображения</div>
       )}
