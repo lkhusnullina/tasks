@@ -24,7 +24,7 @@ React, typescript, vite, module.scss, json-server, json-server-auth
 #### Скачайте архив проекта или склонируйте репозиторий
 
 ```sh
-
+git@github.com:lkhusnullina/tasks.git
 ```
 
 #### Установите зависимости проекта
