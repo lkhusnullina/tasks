@@ -49,3 +49,13 @@ export const getTaskById = async (id: number): Promise<ITask> => {
   const response = await api.get(`/tasks/${id}`);
   return response.data;
 };
+
+export const createTask = async (taskData: Omit<ITask, 'id'>): Promise<ITask> => {
+  const response = await api.post('/tasks', taskData);
+  return response.data;
+};
+
+export const editTask = async (id: number, taskData: Partial<ITask>): Promise<ITask> => {
+  const response = await api.put(`/tasks/${id}`, taskData);
+  return response.data;
+};

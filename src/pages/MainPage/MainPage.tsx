@@ -6,31 +6,35 @@ import TaskFilter from '../../components/TaskFilter/TaskFilter';
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function MainPage() {
   const { user } = useAuth();
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialFilter = searchParams.get("filter") === 'my' ? 'my' : 'all'
+  const initialFilter = searchParams.get('filter') === 'my' ? 'my' : 'all';
   const [filter, setFilter] = useState<'all' | 'my'>(initialFilter);
 
   useEffect(() => {
-    setSearchParams({filter})
-  }, [filter,setSearchParams])
+    setSearchParams({ filter });
+  }, [filter, setSearchParams]);
 
   return (
     <main className={styles.main}>
       <div className={styles.main__top}>
         <h2 className={styles.main__title}>Список задач</h2>
+
         <div className={styles.main__btnBlock}>
-          <TaskFilter filter={filter} onChange={setFilter}/>
-          <IconButton
-            className={styles.main__btnAdd}
-            icon={plusIcon}
-            alt="plus"
-          />
+          <TaskFilter filter={filter} onChange={setFilter} />
+          <Link to={'/create'}>
+            <IconButton
+              className={styles.main__btnAdd}
+              icon={plusIcon}
+              alt="plus"
+            />
+          </Link>
         </div>
       </div>
-      <TasksList filter={filter} user={user}/>
+      <TasksList filter={filter} user={user} />
     </main>
   );
 }

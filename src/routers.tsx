@@ -5,6 +5,8 @@ import AuthPage from './pages/AuthPage/AuthPage';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import LayoutPage from './pages/LayoutPage/LayoutPage';
+import CreateTaskPage from './pages/CreateTaskPage/CreateTaskPage';
+import EditTaskPage from './pages/EditTaskPage/EditTaskPage';
 
 export const AppRoutes = () => {
   return (
@@ -17,6 +19,8 @@ export const AppRoutes = () => {
             <Route element={<ProtectedRoute />}>
               <Route path="/" element={<MainPage />} />
               <Route path="/tasks/:id" element={<TaskPage />} />
+              <Route path="/create" element={<CreateTaskPage/>} />
+              <Route path="/tasks/:id/edit" element={<EditTaskPage/>} />
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" />} />

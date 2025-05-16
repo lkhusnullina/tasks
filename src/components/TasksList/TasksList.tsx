@@ -3,6 +3,7 @@ import { getTasks } from '../../services/api';
 import type { ITask } from '../../models/ITask';
 import Task from '../Task/Task';
 import styles from './TasksList.module.scss';
+
 interface TasksListProps {
   filter: 'all' | 'my';
   user?: string | null;
@@ -27,6 +28,8 @@ function TasksList({ filter, user }: TasksListProps) {
 
     loadTasks();
   }, []);
+
+  
 
   const filteredTasks = tasks.filter((task) => {
     if (filter === 'my' && user) {

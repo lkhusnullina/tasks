@@ -3,51 +3,79 @@
     {
       "id": 1,
       "title": "Задача 1",
-      "description": "Задача1Задача1Задача1Задача1Задача1",
+      "description": "Задача1",
       "isCompleted": false,
       "author": "bob@example.com"
     },
     {
-      "id": 2,
-      "title": "Задача 2",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
-      "isCompleted": true,
-      "author": "love@example.com"
+      "title": "Задача2",
+      "description": "Задача 2",
+      "isCompleted": false,
+      "author": "love@example.com",
+      "id": 2
     },
     {
-      "id": 3,
       "title": "Задача 3",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "description": "Задача 3",
       "isCompleted": true,
-      "author": "bob@example.com"
+      "author": "love@example.com",
+      "id": 3
     },
     {
       "id": 4,
       "title": "Задача 4",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "description": "Задача 4",
       "isCompleted": true,
       "author": "bob@example.com"
     },
     {
       "id": 5,
       "title": "Задача 5",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "description": "Задача 5",
       "isCompleted": true,
       "author": "love@example.com"
     },
     {
       "id": 6,
       "title": "Задача 6",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "description": "Задача 6",
       "isCompleted": true,
       "author": "love@example.com"
     },
     {
       "id": 7,
       "title": "Задача 7",
-      "description": "Задача 2Задача 2Задача 2Задача 2Задача 2",
+      "description": "Задача 7",
       "isCompleted": true,
       "author": "love@example.com"
+    },
+    {
+      "title": "магазин",
+      "description": "купить хлеб",
+      "isCompleted": false,
+      "author": "love@example.com",
+      "id": 8
+    },
+    {
+      "title": "Машина",
+      "description": "Купить масло",
+      "isCompleted": true,
+      "author": "love@example.com",
+      "id": 9
+    },
+    {
+      "title": "Учеба",
+      "description": "Подготовить доклад",
+      "isCompleted": false,
+      "author": "bob@example.com",
+      "id": 10
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "isCompleted": false,
+      "author": "love@example.com",
+      "id": 11
     }
   ],
   "users": [

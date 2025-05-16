@@ -17,6 +17,7 @@ function TaskFilter({ filter, onChange }: FilterProps) {
     onChange(value);
     setIsOpen(false);
   };
+  
   return (
     <div className={styles.filter}>
       <Button className={styles.filter__btnFilter} onClick={toggle}>

@@ -24,18 +24,20 @@ function Task({ task }: TaskProps) {
       </div>
 
       <div className={styles.task__icons}>
-       <Link to={`/tasks/${task.id}`}>
+        <Link to={`/tasks/${task.id}`}>
           <IconButton
             className={styles.task__iconBtn}
             icon={eyeIcon}
             alt="Просмотр"
           />
         </Link>
-        <IconButton
-          className={styles.task__iconBtn}
-          icon={editIcon}
-          alt="Редактирование"
-        />
+        <Link to={`/tasks/${task.id}/edit`}>
+          <IconButton
+            className={styles.task__iconBtn}
+            icon={editIcon}
+            alt="Редактирование"
+          />
+        </Link>
         <IconButton
           className={styles.task__iconBtn}
           icon={deleteIcon}
