@@ -5,6 +5,11 @@
         display: flex;
         justify-content: space-between;
     }
+    &__btnBlock {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
     &__btnAdd {
         padding: 10px 12px;
         border-radius: 50%;
