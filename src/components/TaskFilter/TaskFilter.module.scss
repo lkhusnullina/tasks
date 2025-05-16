@@ -3,8 +3,6 @@
   &__btnFilter {
     background-color: #6c63ff;
     border: none;
-    color: #f7f7f7;
-    font-size: 16px;
     border-radius: 5px;
   }
 }
@@ -13,13 +11,13 @@
   position: absolute;
   top: 110%;
   left: 0;
-
   &__btn {
     display: block;
     width: 100%;
-
+    background-color: #b1adf0;
+  
     &:hover {
-      background-color: #7c78c3;
+      background-color: #6c63ff;
     }
   }
 }
